@@ -1,2 +1,8 @@
 # LC4_Assembly
-Assorted assembly programs and TRAPs for the LC4 microarchitecture.
+Overview: Assorted assembly programs and TRAPs for the LC4 microarchitecture.
+
+Design: These items were assigned by Dr. Thomas Farmer at the University of Pennsylvania as part of CIT 593. LC4 is a microarchitecture designed at Penn. The PennSim program included in these files belongs to the University and siumlates the LC4 architecture. The LC4_Compiler files are also property of the University and compile C programs into LC4 assembly. 
+
+Use: TRAP_Tests contains a file os.asm in which I implemented a number of I/O TRAPs for the LC4 OS. The 3 other .asm files in this folder are assembly programs written to test the TRAPs by doing things such as drawing boxes on the screen. The scripts with similar titles contain a series of commands to be run by the PennSim program that will compile and run the .asm files. To do this, open PennSim (must be in same folder) and type "script <name of .txt file>" in the command line and press enter. You can then run the program by pressing Continue or Step (which will move through 1 instruction). 
+
+Tetris folder contains the same OS and additional files provided by Dr. Thomas Farmer for operating LC4. tetris.c was written to be a basic C program that uses the TRAPS written in assembly to operate. It must first be compiled to a .asm file to be executed. To do this, add the files from the compiler folder to the folder containing tetris.c. Then from the command line execute ./lcc tetris.c. An .asm file will be produced and you can run the tetris_script.txt file in PennSim using the method described in the previous paragraph. The tetris program is not a full game but rather demonstrates the implementation of building blocks needed to complete the game on the LC4 architecture.
