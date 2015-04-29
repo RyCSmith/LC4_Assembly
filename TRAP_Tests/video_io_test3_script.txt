@@ -1,0 +1,10 @@
+reset
+
+as video_io_test3 video_io_test3
+as os os
+
+ld video_io_test3
+ld os
+
+break set END
+
