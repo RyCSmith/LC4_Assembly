@@ -1,0 +1,10 @@
+clear
+reset
+
+as tetris user lc4_stdio tetris  # Links 3 .ASM files into 1 .OBJ
+ld tetris				 	 # loads the linked .OBJ
+
+as os os	# don't forget the OS!
+ld os
+
+break set END
